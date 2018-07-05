@@ -1,0 +1,43 @@
+====================
+Directives
+====================
+
+<div>
+  <% names.each do |name| _%>
+    <%= name -%>
+  <%_ end %>
+</div>
+
+---
+
+(template
+  (content)
+  (directive (code))
+  (content)
+  (output_directive (code))
+  (content)
+  (directive (code))
+  (content))
+
+===============================
+Escaped directive start strings
+===============================
+
+This "<%%" is not a directive
+
+---
+
+(template (content))
+
+===============================
+Comment directives
+===============================
+
+<span><%# a comment %></span>
+
+---
+
+(template
+  (content)
+  (comment_directive (comment))
+  (content))
