@@ -1,7 +1,7 @@
 {
-  "name": "tree-sitter-json",
-  "version": "0.11.0",
-  "description": "JSON grammar for tree-sitter",
+  "name": "tree-sitter-embedded-template",
+  "version": "0.12.0",
+  "description": "Embedded template grammar for tree-sitter",
   "main": "index.js",
   "keywords": [
     "parser",
