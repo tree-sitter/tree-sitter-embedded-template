@@ -19,10 +19,10 @@ enum {
   anon_sym_LT_PERCENT = 3,
   anon_sym_LT_PERCENT_ = 4,
   anon_sym_PERCENT_GT = 5,
-  anon_sym__PERCENT_GT = 6,
-  anon_sym_LT_PERCENT_EQ = 7,
-  anon_sym_LT_PERCENT_DASH = 8,
-  anon_sym_DASH_PERCENT_GT = 9,
+  anon_sym_DASH_PERCENT_GT = 6,
+  anon_sym__PERCENT_GT = 7,
+  anon_sym_LT_PERCENT_EQ = 8,
+  anon_sym_LT_PERCENT_DASH = 9,
   anon_sym_LT_PERCENT_POUND = 10,
   sym_template = 11,
   sym_directive = 12,
@@ -39,10 +39,10 @@ static const char *ts_symbol_names[] = {
   [anon_sym_LT_PERCENT] = "<%",
   [anon_sym_LT_PERCENT_] = "<%_",
   [anon_sym_PERCENT_GT] = "%>",
+  [anon_sym_DASH_PERCENT_GT] = "-%>",
   [anon_sym__PERCENT_GT] = "_%>",
   [anon_sym_LT_PERCENT_EQ] = "<%=",
   [anon_sym_LT_PERCENT_DASH] = "<%-",
-  [anon_sym_DASH_PERCENT_GT] = "-%>",
   [anon_sym_LT_PERCENT_POUND] = "<%#",
   [sym_template] = "template",
   [sym_directive] = "directive",
@@ -77,6 +77,10 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .visible = true,
     .named = false,
   },
+  [anon_sym_DASH_PERCENT_GT] = {
+    .visible = true,
+    .named = false,
+  },
   [anon_sym__PERCENT_GT] = {
     .visible = true,
     .named = false,
@@ -86,10 +90,6 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .named = false,
   },
   [anon_sym_LT_PERCENT_DASH] = {
-    .visible = true,
-    .named = false,
-  },
-  [anon_sym_DASH_PERCENT_GT] = {
     .visible = true,
     .named = false,
   },
@@ -274,10 +274,10 @@ static uint16_t ts_parse_table[STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_LT_PERCENT] = ACTIONS(3),
     [anon_sym_LT_PERCENT_] = ACTIONS(1),
     [anon_sym_PERCENT_GT] = ACTIONS(1),
+    [anon_sym_DASH_PERCENT_GT] = ACTIONS(1),
     [anon_sym__PERCENT_GT] = ACTIONS(1),
     [anon_sym_LT_PERCENT_EQ] = ACTIONS(1),
     [anon_sym_LT_PERCENT_DASH] = ACTIONS(1),
-    [anon_sym_DASH_PERCENT_GT] = ACTIONS(1),
     [anon_sym_LT_PERCENT_POUND] = ACTIONS(1),
   },
   [1] = {
@@ -321,6 +321,7 @@ static uint16_t ts_parse_table[STATE_COUNT][SYMBOL_COUNT] = {
   },
   [7] = {
     [anon_sym_PERCENT_GT] = ACTIONS(29),
+    [anon_sym_DASH_PERCENT_GT] = ACTIONS(29),
     [anon_sym__PERCENT_GT] = ACTIONS(29),
   },
   [8] = {

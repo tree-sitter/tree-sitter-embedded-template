@@ -5,6 +5,7 @@ Directives
 <div>
   <% names.each do |name| _%>
     <%= name -%>
+    <% something() -%>
   <%_ end %>
 </div>
 
@@ -15,6 +16,8 @@ Directives
   (directive (code))
   (content)
   (output_directive (code))
+  (content)
+  (directive (code))
   (content)
   (directive (code))
   (content))
