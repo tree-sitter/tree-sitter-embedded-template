@@ -41,3 +41,18 @@ Comment directives
   (content)
   (comment_directive (comment))
   (content))
+
+===============================
+Underscores in code
+===============================
+
+<div>
+<% page_info :selected_link %>
+</div>
+
+---
+
+(template
+  (content)
+  (directive (code))
+  (content))

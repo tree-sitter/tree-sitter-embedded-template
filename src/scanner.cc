@@ -95,10 +95,10 @@ bool tree_sitter_embedded_template_external_scanner_scan(void *payload, TSLexer 
           break;
 
         case AFTER_QUALIFIER:
-          if (lexer->lookahead == '-' || lexer->lookahead == '_') {
-            lexer->mark_end(lexer);
-          } else if (lexer->lookahead == '%') {
+          if (lexer->lookahead == '%') {
             state = AFTER_PERCENT;
+          } else {
+            lexer->mark_end(lexer);
           }
           break;
 
