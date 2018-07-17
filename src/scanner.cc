@@ -99,6 +99,7 @@ bool tree_sitter_embedded_template_external_scanner_scan(void *payload, TSLexer 
             state = AFTER_PERCENT;
           } else {
             lexer->mark_end(lexer);
+            state = START;
           }
           break;
 
@@ -106,6 +107,7 @@ bool tree_sitter_embedded_template_external_scanner_scan(void *payload, TSLexer 
           if (lexer->lookahead == '>') {
             state = DONE;
           } else {
+            lexer->mark_end(lexer);
             state = START;
           }
           break;
