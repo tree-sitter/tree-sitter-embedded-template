@@ -5,7 +5,7 @@
 #pragma GCC diagnostic ignored "-Wmissing-field-initializers"
 #endif
 
-#define LANGUAGE_VERSION 8
+#define LANGUAGE_VERSION 9
 #define STATE_COUNT 14
 #define SYMBOL_COUNT 16
 #define ALIAS_COUNT 1
@@ -220,6 +220,26 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
         SKIP(16);
       END_STATE();
     case 17:
+      if (lookahead == 0)
+        ADVANCE(1);
+      if (lookahead == '\t' ||
+          lookahead == '\n' ||
+          lookahead == '\r' ||
+          lookahead == ' ')
+        SKIP(17);
+      END_STATE();
+    case 18:
+      if (lookahead == '%')
+        ADVANCE(2);
+      if (lookahead == '-')
+        ADVANCE(4);
+      if (lookahead == '_')
+        ADVANCE(13);
+      if (lookahead == '\t' ||
+          lookahead == '\n' ||
+          lookahead == '\r' ||
+          lookahead == ' ')
+        SKIP(18);
       END_STATE();
     default:
       return false;
@@ -232,11 +252,11 @@ static TSLexMode ts_lex_modes[STATE_COUNT] = {
   [2] = {.lex_state = 17, .external_lex_state = 3},
   [3] = {.lex_state = 17, .external_lex_state = 3},
   [4] = {.lex_state = 17, .external_lex_state = 3},
-  [5] = {.lex_state = 0},
+  [5] = {.lex_state = 17},
   [6] = {.lex_state = 16, .external_lex_state = 2},
-  [7] = {.lex_state = 0},
-  [8] = {.lex_state = 0},
-  [9] = {.lex_state = 0},
+  [7] = {.lex_state = 18},
+  [8] = {.lex_state = 18},
+  [9] = {.lex_state = 18},
   [10] = {.lex_state = 16, .external_lex_state = 2},
   [11] = {.lex_state = 16, .external_lex_state = 2},
   [12] = {.lex_state = 16, .external_lex_state = 2},
