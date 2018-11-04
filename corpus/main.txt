@@ -4,8 +4,12 @@ Directives
 
 <div>
   <% names.each do |name| _%>
-    <%= name -%>
-    <% something() -%>
+    <div>
+      <%= name -%>
+    </div>
+    <span>
+      <% something() -%>
+    </span>
   <%_ end %>
 </div>
 
