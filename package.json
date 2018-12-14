@@ -18,5 +18,13 @@
   "scripts": {
     "build": "tree-sitter generate && node-gyp build",
     "test": "tree-sitter test"
-  }
+  },
+  "tree-sitter": [
+    {
+      "textmate-scope": "text.html.erb",
+      "file-types": ["erb"],
+      "highlights": "src/highlights-erb.json",
+      "injection-regex": "erb"
+    }
+  ]
 }

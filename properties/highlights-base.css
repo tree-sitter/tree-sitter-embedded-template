@@ -1,0 +1,14 @@
+comment_directive {
+  scope: 'comment';
+}
+
+"<%#",
+"<%",
+"<%=",
+"<%_",
+"<%-",
+"%>",
+"-%>",
+"_%>" {
+  scope: 'keyword';
+}

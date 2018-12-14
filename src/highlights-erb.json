@@ -1,0 +1,277 @@
+{
+  "states": [
+    {
+      "id": 0,
+      "property_set_id": 0,
+      "transitions": [
+        {
+          "type": "%>",
+          "named": false,
+          "state_id": 1
+        },
+        {
+          "type": "-%>",
+          "named": false,
+          "state_id": 1
+        },
+        {
+          "type": "<%",
+          "named": false,
+          "state_id": 1
+        },
+        {
+          "type": "<%#",
+          "named": false,
+          "state_id": 1
+        },
+        {
+          "type": "<%-",
+          "named": false,
+          "state_id": 1
+        },
+        {
+          "type": "<%=",
+          "named": false,
+          "state_id": 1
+        },
+        {
+          "type": "<%_",
+          "named": false,
+          "state_id": 1
+        },
+        {
+          "type": "_%>",
+          "named": false,
+          "state_id": 1
+        },
+        {
+          "type": "comment_directive",
+          "named": true,
+          "state_id": 2
+        },
+        {
+          "type": "template",
+          "named": true,
+          "state_id": 3
+        }
+      ],
+      "default_next_state_id": 0
+    },
+    {
+      "id": 1,
+      "property_set_id": 1,
+      "transitions": [
+        {
+          "type": "%>",
+          "named": false,
+          "state_id": 1
+        },
+        {
+          "type": "-%>",
+          "named": false,
+          "state_id": 1
+        },
+        {
+          "type": "<%",
+          "named": false,
+          "state_id": 1
+        },
+        {
+          "type": "<%#",
+          "named": false,
+          "state_id": 1
+        },
+        {
+          "type": "<%-",
+          "named": false,
+          "state_id": 1
+        },
+        {
+          "type": "<%=",
+          "named": false,
+          "state_id": 1
+        },
+        {
+          "type": "<%_",
+          "named": false,
+          "state_id": 1
+        },
+        {
+          "type": "_%>",
+          "named": false,
+          "state_id": 1
+        },
+        {
+          "type": "comment_directive",
+          "named": true,
+          "state_id": 2
+        },
+        {
+          "type": "template",
+          "named": true,
+          "state_id": 3
+        }
+      ],
+      "default_next_state_id": 0
+    },
+    {
+      "id": 2,
+      "property_set_id": 2,
+      "transitions": [
+        {
+          "type": "%>",
+          "named": false,
+          "state_id": 1
+        },
+        {
+          "type": "-%>",
+          "named": false,
+          "state_id": 1
+        },
+        {
+          "type": "<%",
+          "named": false,
+          "state_id": 1
+        },
+        {
+          "type": "<%#",
+          "named": false,
+          "state_id": 1
+        },
+        {
+          "type": "<%-",
+          "named": false,
+          "state_id": 1
+        },
+        {
+          "type": "<%=",
+          "named": false,
+          "state_id": 1
+        },
+        {
+          "type": "<%_",
+          "named": false,
+          "state_id": 1
+        },
+        {
+          "type": "_%>",
+          "named": false,
+          "state_id": 1
+        },
+        {
+          "type": "comment_directive",
+          "named": true,
+          "state_id": 2
+        },
+        {
+          "type": "template",
+          "named": true,
+          "state_id": 3
+        }
+      ],
+      "default_next_state_id": 0
+    },
+    {
+      "id": 3,
+      "property_set_id": 3,
+      "transitions": [
+        {
+          "type": "%>",
+          "named": false,
+          "state_id": 1
+        },
+        {
+          "type": "-%>",
+          "named": false,
+          "state_id": 1
+        },
+        {
+          "type": "<%",
+          "named": false,
+          "state_id": 1
+        },
+        {
+          "type": "<%#",
+          "named": false,
+          "state_id": 1
+        },
+        {
+          "type": "<%-",
+          "named": false,
+          "state_id": 1
+        },
+        {
+          "type": "<%=",
+          "named": false,
+          "state_id": 1
+        },
+        {
+          "type": "<%_",
+          "named": false,
+          "state_id": 1
+        },
+        {
+          "type": "_%>",
+          "named": false,
+          "state_id": 1
+        },
+        {
+          "type": "comment_directive",
+          "named": true,
+          "state_id": 2
+        },
+        {
+          "type": "template",
+          "named": true,
+          "state_id": 3
+        }
+      ],
+      "default_next_state_id": 0
+    }
+  ],
+  "property_sets": [
+    {},
+    {
+      "scope": "keyword"
+    },
+    {
+      "scope": "comment"
+    },
+    {
+      "injection-content": [
+        {
+          "name": "child",
+          "args": [
+            {
+              "name": "children",
+              "args": [
+                {
+                  "name": "this",
+                  "args": []
+                },
+                "directive",
+                "output_directive"
+              ]
+            },
+            1,
+            "code"
+          ]
+        },
+        {
+          "name": "children",
+          "args": [
+            {
+              "name": "this",
+              "args": []
+            },
+            "content"
+          ]
+        }
+      ],
+      "injection-language": [
+        "ruby",
+        "html"
+      ]
+    }
+  ]
+}
