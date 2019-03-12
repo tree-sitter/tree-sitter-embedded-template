@@ -2,13 +2,13 @@ comment_directive {
   scope: 'comment';
 }
 
-"<%#",
-"<%",
-"<%=",
-"<%_",
-"<%-",
-"%>",
-"-%>",
-"_%>" {
+[token="<%#"],
+[token="<%"],
+[token="<%="],
+[token="<%_"],
+[token="<%-"],
+[token="%>"],
+[token="-%>"],
+[token="_%>"] {
   scope: 'keyword';
 }

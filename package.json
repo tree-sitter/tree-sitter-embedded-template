@@ -13,7 +13,7 @@
     "nan": "^2.0.0"
   },
   "devDependencies": {
-    "tree-sitter-cli": "^0.13.1"
+    "tree-sitter-cli": "^0.14.5"
   },
   "scripts": {
     "build": "tree-sitter generate && node-gyp build",
@@ -21,7 +21,13 @@
   },
   "tree-sitter": [
     {
-      "textmate-scope": "text.html.erb",
+      "scope": "text.html.ejs",
+      "file-types": ["ejs"],
+      "highlights": "src/highlights-ejs.json",
+      "injection-regex": "ejs"
+    },
+    {
+      "scope": "text.html.erb",
       "file-types": ["erb"],
       "highlights": "src/highlights-erb.json",
       "injection-regex": "erb"

@@ -240,32 +240,32 @@
     {
       "injection-content": [
         {
-          "name": "child",
           "args": [
             {
-              "name": "children",
               "args": [
                 {
-                  "name": "this",
-                  "args": []
+                  "args": [],
+                  "name": "this"
                 },
                 "directive",
                 "output_directive"
-              ]
+              ],
+              "name": "children"
             },
             1,
             "code"
-          ]
+          ],
+          "name": "child"
         },
         {
-          "name": "children",
           "args": [
             {
-              "name": "this",
-              "args": []
+              "args": [],
+              "name": "this"
             },
             "content"
-          ]
+          ],
+          "name": "children"
         }
       ],
       "injection-language": [

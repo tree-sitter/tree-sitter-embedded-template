@@ -1,13 +1,8 @@
 template {
   injection-language: 'javascript';
   injection-content: child(
-    children(
-      this(),
-      'directive',
-      'output_directive'
-    ),
-    1,
-    'code'
+    children(this(), 'directive', 'output_directive'),
+    1, 'code',
   );
 
   injection-language: 'html';
