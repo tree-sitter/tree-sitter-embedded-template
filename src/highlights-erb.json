@@ -232,10 +232,10 @@
   "property_sets": [
     {},
     {
-      "scope": "keyword"
+      "highlight": "keyword"
     },
     {
-      "scope": "comment"
+      "highlight": "comment"
     },
     {
       "injection-content": [

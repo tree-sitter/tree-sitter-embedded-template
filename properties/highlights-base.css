@@ -1,5 +1,5 @@
 comment_directive {
-  scope: 'comment';
+  highlight: 'comment';
 }
 
 [token="<%#"],
@@ -10,5 +10,5 @@ comment_directive {
 [token="%>"],
 [token="-%>"],
 [token="_%>"] {
-  scope: 'keyword';
+  highlight: 'keyword';
 }
