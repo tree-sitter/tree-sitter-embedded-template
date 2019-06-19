@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-embedded-template",
-  "version": "0.13.0",
+  "version": "0.15.0",
   "description": "Embedded template grammar for tree-sitter",
   "main": "index.js",
   "keywords": [
@@ -22,13 +22,17 @@
   "tree-sitter": [
     {
       "scope": "text.html.ejs",
-      "file-types": ["ejs"],
+      "file-types": [
+        "ejs"
+      ],
       "highlights": "src/highlights-ejs.json",
       "injection-regex": "ejs"
     },
     {
       "scope": "text.html.erb",
-      "file-types": ["erb"],
+      "file-types": [
+        "erb"
+      ],
       "highlights": "src/highlights-erb.json",
       "injection-regex": "erb"
     }
