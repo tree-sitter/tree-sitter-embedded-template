@@ -5,12 +5,13 @@
 #pragma GCC diagnostic ignored "-Wmissing-field-initializers"
 #endif
 
-#define LANGUAGE_VERSION 9
+#define LANGUAGE_VERSION 10
 #define STATE_COUNT 14
 #define SYMBOL_COUNT 16
 #define ALIAS_COUNT 1
 #define TOKEN_COUNT 11
 #define EXTERNAL_TOKEN_COUNT 2
+#define FIELD_COUNT 0
 #define MAX_ALIAS_SEQUENCE_LENGTH 3
 
 enum {
@@ -412,11 +413,11 @@ static TSParseActionEntry ts_parse_actions[] = {
   [52] = {.count = 1, .reusable = false}, REDUCE(sym_directive, 3),
   [54] = {.count = 1, .reusable = true}, REDUCE(sym_output_directive, 3),
   [56] = {.count = 1, .reusable = false}, REDUCE(sym_output_directive, 3),
-  [58] = {.count = 1, .reusable = true}, REDUCE(sym_comment_directive, 3, .alias_sequence_id = 1),
-  [60] = {.count = 1, .reusable = false}, REDUCE(sym_comment_directive, 3, .alias_sequence_id = 1),
+  [58] = {.count = 1, .reusable = true}, REDUCE(sym_comment_directive, 3, .production_id = 1),
+  [60] = {.count = 1, .reusable = false}, REDUCE(sym_comment_directive, 3, .production_id = 1),
 };
 
-void *tree_sitter_embedded_template_external_scanner_create();
+void *tree_sitter_embedded_template_external_scanner_create(void);
 void tree_sitter_embedded_template_external_scanner_destroy(void *);
 bool tree_sitter_embedded_template_external_scanner_scan(void *, TSLexer *, const bool *);
 unsigned tree_sitter_embedded_template_external_scanner_serialize(void *, char *);
@@ -426,7 +427,7 @@ void tree_sitter_embedded_template_external_scanner_deserialize(void *, const ch
 #define extern __declspec(dllexport)
 #endif
 
-extern const TSLanguage *tree_sitter_embedded_template() {
+extern const TSLanguage *tree_sitter_embedded_template(void) {
   static TSLanguage language = {
     .version = LANGUAGE_VERSION,
     .symbol_count = SYMBOL_COUNT,
@@ -438,6 +439,7 @@ extern const TSLanguage *tree_sitter_embedded_template() {
     .lex_modes = ts_lex_modes,
     .symbol_names = ts_symbol_names,
     .alias_sequences = (const TSSymbol *)ts_alias_sequences,
+    .field_count = FIELD_COUNT,
     .max_alias_sequence_length = MAX_ALIAS_SEQUENCE_LENGTH,
     .lex_fn = ts_lex,
     .external_token_count = EXTERNAL_TOKEN_COUNT,
