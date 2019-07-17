@@ -53,6 +53,10 @@
       "required": false,
       "types": [
         {
+          "type": "comment_directive",
+          "named": true
+        },
+        {
           "type": "content",
           "named": true
         },
@@ -62,10 +66,6 @@
         },
         {
           "type": "output_directive",
-          "named": true
-        },
-        {
-          "type": "comment_directive",
           "named": true
         }
       ]

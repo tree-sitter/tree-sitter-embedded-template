@@ -134,104 +134,64 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
   START_LEXER();
   switch (state) {
     case 0:
-      if (lookahead == 0)
-        ADVANCE(1);
-      if (lookahead == '%')
-        ADVANCE(2);
-      if (lookahead == '-')
-        ADVANCE(3);
-      if (lookahead == '<')
-        ADVANCE(4);
-      if (lookahead == '_')
-        ADVANCE(5);
+      if (lookahead == 0) ADVANCE(7);
+      if (lookahead == '%') ADVANCE(4);
+      if (lookahead == '-') ADVANCE(2);
+      if (lookahead == '<') ADVANCE(1);
+      if (lookahead == '_') ADVANCE(3);
       if (lookahead == '\t' ||
           lookahead == '\n' ||
           lookahead == '\r' ||
-          lookahead == ' ')
-        SKIP(0);
+          lookahead == ' ') SKIP(0)
       END_STATE();
     case 1:
-      ACCEPT_TOKEN(ts_builtin_sym_end);
+      if (lookahead == '%') ADVANCE(8);
       END_STATE();
     case 2:
-      if (lookahead == '>')
-        ADVANCE(6);
+      if (lookahead == '%') ADVANCE(5);
       END_STATE();
     case 3:
-      if (lookahead == '%')
-        ADVANCE(7);
+      if (lookahead == '%') ADVANCE(6);
       END_STATE();
     case 4:
-      if (lookahead == '%')
-        ADVANCE(8);
+      if (lookahead == '>') ADVANCE(10);
       END_STATE();
     case 5:
-      if (lookahead == '%')
-        ADVANCE(9);
+      if (lookahead == '>') ADVANCE(11);
       END_STATE();
     case 6:
-      ACCEPT_TOKEN(anon_sym_PERCENT_GT);
+      if (lookahead == '>') ADVANCE(12);
       END_STATE();
     case 7:
-      if (lookahead == '>')
-        ADVANCE(10);
+      ACCEPT_TOKEN(ts_builtin_sym_end);
       END_STATE();
     case 8:
       ACCEPT_TOKEN(anon_sym_LT_PERCENT);
-      if (lookahead == '#')
-        ADVANCE(11);
-      if (lookahead == '-')
-        ADVANCE(12);
-      if (lookahead == '=')
-        ADVANCE(13);
-      if (lookahead == '_')
-        ADVANCE(14);
+      if (lookahead == '#') ADVANCE(15);
+      if (lookahead == '-') ADVANCE(14);
+      if (lookahead == '=') ADVANCE(13);
+      if (lookahead == '_') ADVANCE(9);
       END_STATE();
     case 9:
-      if (lookahead == '>')
-        ADVANCE(15);
+      ACCEPT_TOKEN(anon_sym_LT_PERCENT_);
       END_STATE();
     case 10:
-      ACCEPT_TOKEN(anon_sym_DASH_PERCENT_GT);
+      ACCEPT_TOKEN(anon_sym_PERCENT_GT);
       END_STATE();
     case 11:
-      ACCEPT_TOKEN(anon_sym_LT_PERCENT_POUND);
+      ACCEPT_TOKEN(anon_sym_DASH_PERCENT_GT);
       END_STATE();
     case 12:
-      ACCEPT_TOKEN(anon_sym_LT_PERCENT_DASH);
+      ACCEPT_TOKEN(anon_sym__PERCENT_GT);
       END_STATE();
     case 13:
       ACCEPT_TOKEN(anon_sym_LT_PERCENT_EQ);
       END_STATE();
     case 14:
-      ACCEPT_TOKEN(anon_sym_LT_PERCENT_);
+      ACCEPT_TOKEN(anon_sym_LT_PERCENT_DASH);
       END_STATE();
     case 15:
-      ACCEPT_TOKEN(anon_sym__PERCENT_GT);
-      END_STATE();
-    case 16:
-      if (lookahead == 0)
-        ADVANCE(1);
-      if (lookahead == '<')
-        ADVANCE(4);
-      if (lookahead == '\t' ||
-          lookahead == '\n' ||
-          lookahead == '\r' ||
-          lookahead == ' ')
-        SKIP(16);
-      END_STATE();
-    case 17:
-      if (lookahead == '%')
-        ADVANCE(2);
-      if (lookahead == '-')
-        ADVANCE(3);
-      if (lookahead == '_')
-        ADVANCE(5);
-      if (lookahead == '\t' ||
-          lookahead == '\n' ||
-          lookahead == '\r' ||
-          lookahead == ' ')
-        SKIP(17);
+      ACCEPT_TOKEN(anon_sym_LT_PERCENT_POUND);
       END_STATE();
     default:
       return false;
@@ -240,19 +200,19 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
 
 static TSLexMode ts_lex_modes[STATE_COUNT] = {
   [0] = {.lex_state = 0, .external_lex_state = 1},
-  [1] = {.lex_state = 16, .external_lex_state = 2},
+  [1] = {.lex_state = 0, .external_lex_state = 2},
   [2] = {.lex_state = 0, .external_lex_state = 3},
   [3] = {.lex_state = 0, .external_lex_state = 3},
   [4] = {.lex_state = 0, .external_lex_state = 3},
-  [5] = {.lex_state = 16, .external_lex_state = 2},
+  [5] = {.lex_state = 0, .external_lex_state = 2},
   [6] = {.lex_state = 0},
-  [7] = {.lex_state = 17},
-  [8] = {.lex_state = 17},
-  [9] = {.lex_state = 17},
-  [10] = {.lex_state = 16, .external_lex_state = 2},
-  [11] = {.lex_state = 16, .external_lex_state = 2},
-  [12] = {.lex_state = 16, .external_lex_state = 2},
-  [13] = {.lex_state = 16, .external_lex_state = 2},
+  [7] = {.lex_state = 0},
+  [8] = {.lex_state = 0},
+  [9] = {.lex_state = 0},
+  [10] = {.lex_state = 0, .external_lex_state = 2},
+  [11] = {.lex_state = 0, .external_lex_state = 2},
+  [12] = {.lex_state = 0, .external_lex_state = 2},
+  [13] = {.lex_state = 0, .external_lex_state = 2},
 };
 
 enum {

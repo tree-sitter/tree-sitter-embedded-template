@@ -55,105 +55,13 @@
     {
       "id": 1,
       "property_set_id": 1,
-      "transitions": [
-        {
-          "type": "%>",
-          "named": false,
-          "state_id": 1
-        },
-        {
-          "type": "-%>",
-          "named": false,
-          "state_id": 1
-        },
-        {
-          "type": "<%",
-          "named": false,
-          "state_id": 1
-        },
-        {
-          "type": "<%#",
-          "named": false,
-          "state_id": 1
-        },
-        {
-          "type": "<%-",
-          "named": false,
-          "state_id": 1
-        },
-        {
-          "type": "<%=",
-          "named": false,
-          "state_id": 1
-        },
-        {
-          "type": "<%_",
-          "named": false,
-          "state_id": 1
-        },
-        {
-          "type": "_%>",
-          "named": false,
-          "state_id": 1
-        },
-        {
-          "type": "comment_directive",
-          "named": true,
-          "state_id": 2
-        }
-      ],
+      "transitions": [],
       "default_next_state_id": 0
     },
     {
       "id": 2,
       "property_set_id": 2,
-      "transitions": [
-        {
-          "type": "%>",
-          "named": false,
-          "state_id": 1
-        },
-        {
-          "type": "-%>",
-          "named": false,
-          "state_id": 1
-        },
-        {
-          "type": "<%",
-          "named": false,
-          "state_id": 1
-        },
-        {
-          "type": "<%#",
-          "named": false,
-          "state_id": 1
-        },
-        {
-          "type": "<%-",
-          "named": false,
-          "state_id": 1
-        },
-        {
-          "type": "<%=",
-          "named": false,
-          "state_id": 1
-        },
-        {
-          "type": "<%_",
-          "named": false,
-          "state_id": 1
-        },
-        {
-          "type": "_%>",
-          "named": false,
-          "state_id": 1
-        },
-        {
-          "type": "comment_directive",
-          "named": true,
-          "state_id": 2
-        }
-      ],
+      "transitions": [],
       "default_next_state_id": 0
     }
   ],
