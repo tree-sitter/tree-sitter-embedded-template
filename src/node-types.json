@@ -4,8 +4,8 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": true,
-      "required": false,
+      "multiple": false,
+      "required": true,
       "types": [
         {
           "type": "comment",
@@ -19,8 +19,8 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": true,
-      "required": false,
+      "multiple": false,
+      "required": true,
       "types": [
         {
           "type": "code",
@@ -34,8 +34,8 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": true,
-      "required": false,
+      "multiple": false,
+      "required": true,
       "types": [
         {
           "type": "code",
@@ -72,14 +72,6 @@
     }
   },
   {
-    "type": "<%",
-    "named": false
-  },
-  {
-    "type": "<%_",
-    "named": false
-  },
-  {
     "type": "%>",
     "named": false
   },
@@ -88,11 +80,11 @@
     "named": false
   },
   {
-    "type": "_%>",
+    "type": "<%",
     "named": false
   },
   {
-    "type": "<%=",
+    "type": "<%#",
     "named": false
   },
   {
@@ -100,7 +92,15 @@
     "named": false
   },
   {
-    "type": "<%#",
+    "type": "<%=",
+    "named": false
+  },
+  {
+    "type": "<%_",
+    "named": false
+  },
+  {
+    "type": "_%>",
     "named": false
   }
 ]
