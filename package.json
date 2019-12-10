@@ -1,7 +1,7 @@
 {
   "name": "tree-sitter-embedded-template",
   "version": "0.15.2",
-  "description": "Embedded template grammar for tree-sitter",
+  "description": "Embedded template (ERB, EJS) grammar for tree-sitter",
   "main": "index.js",
   "keywords": [
     "parser",
@@ -10,13 +10,12 @@
   "author": "Max Brunsfeld",
   "license": "MIT",
   "dependencies": {
-    "nan": "^2.0.0"
+    "nan": "^2.14.0"
   },
   "devDependencies": {
-    "tree-sitter-cli": "^0.15.6"
+    "tree-sitter-cli": "^0.16.1"
   },
   "scripts": {
-    "build": "tree-sitter generate && node-gyp build",
     "test": "tree-sitter test"
   },
   "tree-sitter": [
