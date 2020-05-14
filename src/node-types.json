@@ -102,5 +102,17 @@
   {
     "type": "_%>",
     "named": false
+  },
+  {
+    "type": "code",
+    "named": true
+  },
+  {
+    "type": "comment",
+    "named": true
+  },
+  {
+    "type": "content",
+    "named": true
   }
 ]
