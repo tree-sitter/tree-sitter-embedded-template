@@ -85,7 +85,7 @@ bool tree_sitter_embedded_template_external_scanner_scan(void *payload, TSLexer 
 
       switch (state) {
         case START:
-          if (lexer->lookahead == '-' || lexer->lookahead == '_') {
+          if (lexer->lookahead == '-' || lexer->lookahead == '_' || lexer->lookahead == '=') {
             lexer->mark_end(lexer);
             state = AFTER_QUALIFIER;
           } else if (lexer->lookahead == '%') {
