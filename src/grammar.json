@@ -29,6 +29,42 @@
         ]
       }
     },
+    "code": {
+      "type": "REPEAT1",
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "PATTERN",
+            "value": "[^%=_-]+|[%=_-]"
+          },
+          {
+            "type": "STRING",
+            "value": "%%>"
+          }
+        ]
+      }
+    },
+    "content": {
+      "type": "PREC_RIGHT",
+      "value": 0,
+      "content": {
+        "type": "REPEAT1",
+        "content": {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "PATTERN",
+              "value": "[^<]+|<"
+            },
+            {
+              "type": "STRING",
+              "value": "<%%"
+            }
+          ]
+        }
+      }
+    },
     "directive": {
       "type": "SEQ",
       "members": [
@@ -154,16 +190,7 @@
     }
   ],
   "conflicts": [],
-  "externals": [
-    {
-      "type": "SYMBOL",
-      "name": "code"
-    },
-    {
-      "type": "SYMBOL",
-      "name": "content"
-    }
-  ],
+  "externals": [],
   "inline": [],
   "supertypes": []
 }
