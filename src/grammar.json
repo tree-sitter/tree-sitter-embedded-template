@@ -20,6 +20,10 @@
           },
           {
             "type": "SYMBOL",
+            "name": "graphql_directive"
+          },
+          {
+            "type": "SYMBOL",
             "name": "content"
           }
         ]
@@ -94,6 +98,10 @@
             {
               "type": "STRING",
               "value": "-%>"
+            },
+            {
+              "type": "STRING",
+              "value": "=%>"
             }
           ]
         }
@@ -114,6 +122,23 @@
           },
           "named": true,
           "value": "comment"
+        },
+        {
+          "type": "STRING",
+          "value": "%>"
+        }
+      ]
+    },
+    "graphql_directive": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "<%graphql"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "code"
         },
         {
           "type": "STRING",

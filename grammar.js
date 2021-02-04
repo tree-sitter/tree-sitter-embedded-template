@@ -11,6 +11,7 @@ module.exports = grammar({
       $.directive,
       $.output_directive,
       $.comment_directive,
+      $.graphql_directive,
       $.content
     )),
 
@@ -23,12 +24,18 @@ module.exports = grammar({
     output_directive: $ => seq(
       choice('<%=', '<%-'),
       $.code,
-      choice('%>', '-%>')
+      choice('%>', '-%>', '=%>')
     ),
 
     comment_directive: $ => seq(
       '<%#',
       alias($.code, $.comment),
+      '%>'
+    ),
+
+    graphql_directive: $ => seq(
+      '<%graphql',
+      $.code,
       '%>'
     )
   }

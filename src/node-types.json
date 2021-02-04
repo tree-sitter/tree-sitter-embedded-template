@@ -30,6 +30,21 @@
     }
   },
   {
+    "type": "graphql_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "code",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "output_directive",
     "named": true,
     "fields": {},
@@ -65,6 +80,10 @@
           "named": true
         },
         {
+          "type": "graphql_directive",
+          "named": true
+        },
+        {
           "type": "output_directive",
           "named": true
         }
@@ -97,6 +116,14 @@
   },
   {
     "type": "<%_",
+    "named": false
+  },
+  {
+    "type": "<%graphql",
+    "named": false
+  },
+  {
+    "type": "=%>",
     "named": false
   },
   {
