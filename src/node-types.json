@@ -1,5 +1,15 @@
 [
   {
+    "type": "code",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "comment",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "comment_directive",
     "named": true,
     "fields": {},
@@ -13,6 +23,11 @@
         }
       ]
     }
+  },
+  {
+    "type": "content",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "directive",
@@ -91,6 +106,10 @@
     }
   },
   {
+    "type": "%%>",
+    "named": false
+  },
+  {
     "type": "%>",
     "named": false
   },
@@ -104,6 +123,10 @@
   },
   {
     "type": "<%#",
+    "named": false
+  },
+  {
+    "type": "<%%",
     "named": false
   },
   {
@@ -129,17 +152,5 @@
   {
     "type": "_%>",
     "named": false
-  },
-  {
-    "type": "code",
-    "named": true
-  },
-  {
-    "type": "comment",
-    "named": true
-  },
-  {
-    "type": "content",
-    "named": true
   }
 ]

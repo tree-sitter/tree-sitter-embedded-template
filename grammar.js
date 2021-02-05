@@ -1,11 +1,6 @@
 module.exports = grammar({
   name: 'embedded_template',
 
-  externals: $ => [
-    $.code,
-    $.content
-  ],
-
   rules: {
     template: $ => repeat(choice(
       $.directive,
@@ -14,6 +9,10 @@ module.exports = grammar({
       $.graphql_directive,
       $.content
     )),
+
+    code: $ => repeat1(choice(/[^%=_-]+|[%=_-]/, '%%>')),
+
+    content: $ => prec.right(repeat1(choice(/[^<]+|</, '<%%'))),
 
     directive: $ => seq(
       choice('<%', '<%_'),
