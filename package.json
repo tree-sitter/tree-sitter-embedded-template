@@ -2,7 +2,7 @@
   "name": "tree-sitter-embedded-template",
   "version": "0.17.0",
   "description": "Embedded template (ERB, EJS) grammar for tree-sitter",
-  "main": "index.js",
+  "main": "bindings/node",
   "keywords": [
     "parser",
     "json"
@@ -13,7 +13,7 @@
     "nan": "^2.14.0"
   },
   "devDependencies": {
-    "tree-sitter-cli": "^0.17.0"
+    "tree-sitter-cli": "^0.19.1"
   },
   "scripts": {
     "test": "tree-sitter test"
