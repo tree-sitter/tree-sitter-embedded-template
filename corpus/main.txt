@@ -63,3 +63,15 @@ Underscores in code
   (content)
   (directive (code))
   (content))
+
+===============================
+Empty comment
+===============================
+
+<%# %>
+
+---
+
+(template
+  (comment_directive)
+  (content))

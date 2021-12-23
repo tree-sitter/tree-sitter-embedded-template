@@ -28,7 +28,7 @@ module.exports = grammar({
 
     comment_directive: $ => seq(
       '<%#',
-      alias($.code, $.comment),
+      optional(alias($.code, $.comment)),
       '%>'
     ),
 
