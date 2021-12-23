@@ -151,13 +151,21 @@
           "value": "<%#"
         },
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "SYMBOL",
-            "name": "code"
-          },
-          "named": true,
-          "value": "comment"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "ALIAS",
+              "content": {
+                "type": "SYMBOL",
+                "name": "code"
+              },
+              "named": true,
+              "value": "comment"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "STRING",
