@@ -74,7 +74,10 @@ Empty directive
 ---
 
 (template 
+  (content)
   (directive (code))
+  (content)
+  (output_directive (code))
   (content)
 ) 
 
@@ -82,10 +85,11 @@ Empty directive
 Empty comment
 ===============================
 
-<%# %>
+<%#%>
 
 ---
 
 (template
+  (content)
   (comment_directive)
   (content))

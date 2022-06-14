@@ -1,6 +1,6 @@
 module.exports = grammar({
   name: 'embedded_template',
-
+  extras: $ => [],
   rules: {
     template: $ => repeat(choice(
       $.directive,
