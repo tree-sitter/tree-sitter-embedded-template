@@ -93,3 +93,60 @@ Empty comment
   (content)
   (comment_directive)
   (content))
+
+===============================
+Empty directives
+===============================
+
+<%%>
+<% %>
+<%-%>
+<% -%>
+<%_ %>
+<%_%>
+<%_-%>
+<%__%>
+<%=%>
+<%=-%>
+<%==%>
+<%-%>
+<%--%>
+<%-=%>
+<%#%>
+<%graphql%>
+
+---
+
+(template
+  (content)
+  (directive (code))
+  (content)
+  (output_directive)
+  (content)
+  (directive (code))
+  (content)
+  (directive (code))
+  (content)
+  (directive)
+  (content)
+  (directive)
+  (content)
+  (directive)
+  (content)
+  (output_directive)
+  (content)
+  (output_directive)
+  (content)
+  (output_directive)
+  (content)
+  (output_directive)
+  (content)
+  (output_directive)
+  (content)
+  (output_directive)
+  (content)
+  (comment_directive)
+  (content)
+  (graphql_directive)
+  (content)
+)
