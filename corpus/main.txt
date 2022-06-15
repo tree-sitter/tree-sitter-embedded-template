@@ -65,6 +65,20 @@ Underscores in code
   (content))
 
 ===============================
+Empty directive
+===============================
+
+<% %>
+  <%= "hello" %>
+
+---
+
+(template 
+  (directive (code))
+  (content)
+) 
+
+===============================
 Empty comment
 ===============================
 
