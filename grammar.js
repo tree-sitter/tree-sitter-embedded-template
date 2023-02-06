@@ -15,13 +15,13 @@ module.exports = grammar({
     content: $ => prec.right(repeat1(choice(/[^<]+|</, '<%%'))),
 
     directive: $ => seq(
-      choice('<%', '<%_'),
+      choice('<%', '<%_', '<%|'),
       optional($.code),
       choice('%>', '-%>', '_%>')
     ),
 
     output_directive: $ => seq(
-      choice('<%=', '<%==', '<%-'),
+      choice('<%=', '<%==', '<%|=', '<%|==', '<%-'),
       optional($.code),
       choice('%>', '-%>', '=%>')
     ),
