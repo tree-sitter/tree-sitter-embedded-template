@@ -7,6 +7,9 @@ Directives
     <div>
       <%= name -%>
       <%== x %>
+      <%|= x %>
+      <%== x %>
+      <%| end %>
     </div>
     <span>
       <% something() -%>
@@ -23,6 +26,12 @@ Directives
   (output_directive (code))
   (content)
   (output_directive (code))
+  (content)
+  (output_directive (code))
+  (content)
+  (output_directive (code))
+  (content)
+  (directive (code))
   (content)
   (directive (code))
   (content)
@@ -117,7 +126,9 @@ Empty directives
 <%-=%>
 <%#%>
 <%graphql%>
-
+<%|%>
+<%|=%>
+<%|==%>
 ---
 
 (template
@@ -152,4 +163,9 @@ Empty directives
   (content)
   (graphql_directive)
   (content)
+  (directive)
+  (content)
+  (output_directive)
+  (content)
+  (output_directive)
 )
