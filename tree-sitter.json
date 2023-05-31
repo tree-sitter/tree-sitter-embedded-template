@@ -21,6 +21,17 @@
       ],
       "injections": "queries/injections-erb.scm",
       "injection-regex": "erb"
+    },
+    {
+      "name": "embedded-template",
+      "camelcase": "EmbeddedTemplate",
+      "scope": "text.html.etlua",
+      "path": ".",
+      "file-types": [
+        "etlua"
+      ],
+      "injections": "queries/injections-etlua.scm",
+      "injection-regex": "etlua"
     }
   ],
   "metadata": {
