@@ -1,4 +1,4 @@
-#include <tree_sitter/parser.h>
+#include "tree_sitter/parser.h"
 
 #if defined(__GNUC__) || defined(__clang__)
 #pragma GCC diagnostic push
@@ -16,7 +16,7 @@
 #define MAX_ALIAS_SEQUENCE_LENGTH 3
 #define PRODUCTION_ID_COUNT 2
 
-enum {
+enum ts_symbol_identifiers {
   aux_sym_code_token1 = 1,
   anon_sym_PERCENT_PERCENT_GT = 2,
   aux_sym_content_token1 = 3,
