@@ -12,3 +12,4 @@ References
 
 * [ERB Documentation](https://ruby-doc.org/stdlib-2.5.1/libdoc/erb/rdoc/ERB.html)
 * [EJS Documentation](http://ejs.co/#docs)
+* [ETLua Documentation](https://github.com/leafo/etlua)

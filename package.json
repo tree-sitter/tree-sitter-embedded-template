@@ -34,6 +34,14 @@
       ],
       "injections": "queries/injections-erb.scm",
       "injection-regex": "erb"
+    },
+    {
+      "scope": "text.html.etlua",
+      "file-types": [
+        "etlua"
+      ],
+      "injections": "queries/injections-etlua.scm",
+      "injection-regex": "etlua"
     }
   ]
 }
