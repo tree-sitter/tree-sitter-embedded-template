@@ -1,14 +1,22 @@
-tree-sitter-embedded-template
-===========================
+# tree-sitter-embedded-template
 
-[![Build Status](https://travis-ci.org/tree-sitter/tree-sitter-embedded-template.svg?branch=master)](https://travis-ci.org/tree-sitter/tree-sitter-embedded-template)
-[![Build status](https://ci.appveyor.com/api/projects/status/jxh27ejpw68mnsoa/branch/master?svg=true)](https://ci.appveyor.com/project/maxbrunsfeld/tree-sitter-embedded-template/branch/master)
+[![CI][ci]](https://github.com/tree-sitter/tree-sitter-embedded-template/actions/workflows/ci.yml)
+[![discord][discord]](https://discord.gg/w7nTvsVJhm)
+[![matrix][matrix]](https://matrix.to/#/#tree-sitter-chat:matrix.org)
+[![crates][crates]](https://crates.io/crates/tree-sitter-embedded-template)
+[![npm][npm]](https://www.npmjs.com/package/tree-sitter-embedded-template)
 
-A [tree-sitter](https://github.com/tree-sitter/tree-sitter) parser for  templating languages like [ERB](https://ruby-doc.org/stdlib-2.5.1/libdoc/erb/rdoc/ERB.html) and [EJS](http://ejs.co), in which scripting code can be embedded within text content using the delimiters `<%` and `%>`.
+A [tree-sitter](https://github.com/tree-sitter/tree-sitter) parser for templating languages like [ERB](https://ruby-doc.org/stdlib-2.5.1/libdoc/erb/rdoc/ERB.html) and [EJS](http://ejs.co), in which scripting code can be embedded within text content using the delimiters `<%` and `%>`.
 
 [tree-sitter]: https://github.com/tree-sitter/tree-sitter
 
 References
 
-* [ERB Documentation](https://ruby-doc.org/stdlib-2.5.1/libdoc/erb/rdoc/ERB.html)
-* [EJS Documentation](http://ejs.co/#docs)
+- [ERB Documentation](https://ruby-doc.org/stdlib-2.5.1/libdoc/erb/rdoc/ERB.html)
+- [EJS Documentation](http://ejs.co/#docs)
+
+[ci]: https://img.shields.io/github/actions/workflow/status/tree-sitter/tree-sitter-embedded-template/ci.yml?logo=github&label=CI
+[discord]: https://img.shields.io/discord/1063097320771698699?logo=discord&label=discord
+[matrix]: https://img.shields.io/matrix/tree-sitter-chat%3Amatrix.org?logo=matrix&label=matrix
+[npm]: https://img.shields.io/npm/v/tree-sitter-embedded-template?logo=npm
+[crates]: https://img.shields.io/crates/v/tree-sitter-embedded-template?logo=rust
