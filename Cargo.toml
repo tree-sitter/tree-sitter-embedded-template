@@ -1,30 +1,26 @@
 [package]
 name = "tree-sitter-embedded-template"
-description = "ERB grammar for the tree-sitter parsing library"
+description = "Embedded Template (ERB, EJS) grammar for the tree-sitter parsing library"
 version = "0.20.0"
 authors = [
-    "Max Brunsfeld <maxbrunsfeld@gmail.com>",
+  "Max Brunsfeld <maxbrunsfeld@gmail.com>",
+  "Amaan Qureshi <amaanq12@gmail.com>",
 ]
 license = "MIT"
-readme = "bindings/rust/README.md"
-keywords = ["incremental", "parsing", "ruby", "erb", "ejs"]
+keywords = ["incremental", "parsing", "tree-sitter", "embedded-template"]
 categories = ["parsing", "text-editors"]
 repository = "https://github.com/tree-sitter/tree-sitter-embedded-template"
-edition = "2018"
+edition = "2021"
+autoexamples = false
 
 build = "bindings/rust/build.rs"
-include = [
-  "bindings/rust/*",
-  "grammar.js",
-  "queries/*",
-  "src/*",
-]
+include = ["bindings/rust/*", "grammar.js", "queries/*", "src/*"]
 
 [lib]
 path = "bindings/rust/lib.rs"
 
 [dependencies]
-tree-sitter = ">= 0.20"
+tree-sitter = ">=0.21.0"
 
 [build-dependencies]
-cc = "1.0"
+cc = "1.0.96"

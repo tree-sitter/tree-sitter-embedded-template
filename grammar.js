@@ -1,41 +1,52 @@
+/**
+ * @file Embedded Template grammar for tree-sitter
+ * @author Max Brunsfeld <maxbrunsfeld@gmail.com>
+ * @license MIT
+ */
+
+/// <reference types="tree-sitter-cli/dsl" />
+// @ts-check
+
 module.exports = grammar({
   name: 'embedded_template',
-  extras: $ => [],
+
+  extras: _ => [],
+
   rules: {
     template: $ => repeat(choice(
       $.directive,
       $.output_directive,
       $.comment_directive,
       $.graphql_directive,
-      $.content
+      $.content,
     )),
 
-    code: $ => repeat1(choice(/[^%=_-]+|[%=_-]/, '%%>')),
+    code: _ => repeat1(choice(/[^%=_-]+|[%=_-]/, '%%>')),
 
-    content: $ => prec.right(repeat1(choice(/[^<]+|</, '<%%'))),
+    content: _ => prec.right(repeat1(choice(/[^<]+|</, '<%%'))),
 
     directive: $ => seq(
       choice('<%', '<%_', '<%|'),
       optional($.code),
-      choice('%>', '-%>', '_%>')
+      choice('%>', '-%>', '_%>'),
     ),
 
     output_directive: $ => seq(
       choice('<%=', '<%==', '<%|=', '<%|==', '<%-'),
       optional($.code),
-      choice('%>', '-%>', '=%>')
+      choice('%>', '-%>', '=%>'),
     ),
 
     comment_directive: $ => seq(
       '<%#',
       optional(alias($.code, $.comment)),
-      '%>'
+      '%>',
     ),
 
     graphql_directive: $ => seq(
       '<%graphql',
       optional($.code),
-      '%>'
-    )
-  }
+      '%>',
+    ),
+  },
 });
