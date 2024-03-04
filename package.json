@@ -3,6 +3,7 @@
   "version": "0.20.0",
   "description": "Embedded template (ERB, EJS) grammar for tree-sitter",
   "main": "bindings/node",
+  "types": "bindings/node",
   "keywords": [
     "parser",
     "json"
@@ -10,7 +11,7 @@
   "author": "Max Brunsfeld",
   "license": "MIT",
   "dependencies": {
-    "nan": "^2.14.0"
+    "node-addon-api": "^7.1.0"
   },
   "devDependencies": {
     "tree-sitter-cli": "^0.20.0"
