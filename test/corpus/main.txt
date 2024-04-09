@@ -10,6 +10,7 @@ Directives
       <%|= x %>
       <%== x %>
       <%| end %>
+      <%~ end %>
     </div>
     <span>
       <% something() -%>
@@ -30,6 +31,8 @@ Directives
   (output_directive (code))
   (content)
   (output_directive (code))
+  (content)
+  (directive (code))
   (content)
   (directive (code))
   (content)
@@ -85,13 +88,13 @@ Empty directive
 
 ---
 
-(template 
+(template
   (content)
   (directive (code))
   (content)
   (output_directive (code))
   (content)
-) 
+)
 
 ===============================
 Empty comment
@@ -129,6 +132,7 @@ Empty directives
 <%|%>
 <%|=%>
 <%|==%>
+<%~%>
 ---
 
 (template
@@ -168,4 +172,6 @@ Empty directives
   (output_directive)
   (content)
   (output_directive)
+  (content)
+  (directive)
 )
