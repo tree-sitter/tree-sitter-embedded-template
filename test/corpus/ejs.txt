@@ -1,0 +1,45 @@
+=======
+Example
+=======
+
+<% if (user) { %>
+  <h2><%= user.name %></h2>
+<% } %>
+
+---
+
+(template
+  (content)
+  (directive
+    (code))
+  (content)
+  (output_directive
+    (code))
+  (content)
+  (directive
+    (code))
+  (content))
+
+========
+Includes
+========
+
+<ul>
+  <% users.forEach(function(user){ %>
+    <%- include('user/show', {user: user}); %>
+  <% }); %>
+</ul>
+
+---
+
+(template
+  (content)
+  (directive
+    (code))
+  (content)
+  (output_directive
+    (code))
+  (content)
+  (directive
+    (code))
+  (content))

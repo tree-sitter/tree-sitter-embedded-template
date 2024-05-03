@@ -1,0 +1,107 @@
+==========
+Plain Text
+==========
+
+From:  James Edward Gray II <james@grayproductions.net>
+To:  <%= to %>
+Subject:  Addressing Needs
+
+<%= to[/\w+/] %>:
+
+Just wanted to send a quick note assuring that your needs are being
+addressed.
+
+I want you to know that my team will keep working on the issues,
+especially:
+
+<%# ignore numerous minor requests -- focus on priorities %>
+% priorities.each do |priority|
+* <%= priority %>
+% end
+
+Thanks for your patience.
+
+James Edward Gray II
+
+---
+
+(template
+  (content)
+  (output_directive
+    (code))
+  (content)
+  (output_directive
+    (code))
+  (content)
+  (comment_directive
+    (comment))
+  (content)
+  (output_directive
+    (code))
+  (content))
+
+============
+Ruby in HTML
+============
+
+<html>
+<head><title>Ruby Toys -- <%= @name %></title></head>
+<body>
+
+  <h1><%= @name %> (<%= @code %>)</h1>
+  <p><%= @desc %></p>
+
+  <ul>
+    <% @features.each do |f| %>
+      <li><b><%= f %></b></li>
+    <% end %>
+  </ul>
+
+  <p>
+    <% if @cost < 10 %>
+      <b>Only <%= @cost %>!!!</b>
+    <% else %>
+       Call for a price, today!
+    <% end %>
+  </p>
+
+</body>
+</html>
+
+---
+
+(template
+  (content)
+  (output_directive
+    (code))
+  (content)
+  (output_directive
+    (code))
+  (content)
+  (output_directive
+    (code))
+  (content)
+  (output_directive
+    (code))
+  (content)
+  (directive
+    (code))
+  (content)
+  (output_directive
+    (code))
+  (content)
+  (directive
+    (code))
+  (content)
+  (directive
+    (code))
+  (content)
+  (output_directive
+    (code))
+  (content)
+  (directive
+    (code))
+  (content)
+  (directive
+    (code))
+  (content))
