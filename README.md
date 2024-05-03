@@ -10,7 +10,7 @@ A [tree-sitter](https://github.com/tree-sitter/tree-sitter) parser for templatin
 
 [tree-sitter]: https://github.com/tree-sitter/tree-sitter
 
-References
+## References
 
 - [ERB Documentation](https://ruby-doc.org/stdlib-2.5.1/libdoc/erb/rdoc/ERB.html)
 - [EJS Documentation](http://ejs.co/#docs)

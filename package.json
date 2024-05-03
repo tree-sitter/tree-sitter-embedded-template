@@ -1,22 +1,47 @@
 {
   "name": "tree-sitter-embedded-template",
   "version": "0.20.0",
-  "description": "Embedded template (ERB, EJS) grammar for tree-sitter",
-  "main": "bindings/node",
-  "keywords": [
-    "parser",
-    "json"
-  ],
-  "author": "Max Brunsfeld",
   "license": "MIT",
+  "description": "Embedded template (ERB, EJS) grammar for tree-sitter",
+  "repository": "github:tree-sitter/tree-sitter-embedded-template",
+  "author": "Max Brunsfeld <maxbrunsfeld@gmail.com>",
+  "main": "bindings/node",
+  "types": "bindings/node",
+  "keywords": [
+    "incremental",
+    "parsing",
+    "tree-sitter",
+    "erb",
+    "ejs"
+  ],
+  "files": [
+    "grammar.js",
+    "binding.gyp",
+    "prebuilds/**",
+    "bindings/node/*",
+    "queries/*",
+    "src/**"
+  ],
   "dependencies": {
-    "nan": "^2.14.0"
+    "node-addon-api": "^8.0.0",
+    "node-gyp-build": "^4.8.0"
   },
   "devDependencies": {
-    "tree-sitter-cli": "^0.20.0"
+    "tree-sitter-cli": "^0.22.5",
+    "prebuildify": "^6.0.1"
+  },
+  "peerDependencies": {
+    "tree-sitter": "^0.21.1"
+  },
+  "peerDependenciesMeta": {
+    "tree_sitter": {
+      "optional": true
+    }
   },
   "scripts": {
-    "test": "tree-sitter test"
+    "test": "tree-sitter test",
+    "install": "node-gyp-build",
+    "prebuildify": "prebuildify --napi --strip"
   },
   "tree-sitter": [
     {
@@ -24,6 +49,7 @@
       "file-types": [
         "ejs"
       ],
+      "highlights": "queries/highlights.scm",
       "injections": "queries/injections-ejs.scm",
       "injection-regex": "ejs"
     },
@@ -32,6 +58,7 @@
       "file-types": [
         "erb"
       ],
+      "highlights": "queries/highlights.scm",
       "injections": "queries/injections-erb.scm",
       "injection-regex": "erb"
     }
