@@ -1,7 +1,6 @@
 #include "tree_sitter/parser.h"
 
 #if defined(__GNUC__) || defined(__clang__)
-#pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wmissing-field-initializers"
 #endif
 
@@ -896,7 +895,7 @@ static const uint32_t ts_small_parse_table_map[] = {
 static const TSParseActionEntry ts_parse_actions[] = {
   [0] = {.entry = {.count = 0, .reusable = false}},
   [1] = {.entry = {.count = 1, .reusable = false}}, RECOVER(),
-  [3] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_template, 0),
+  [3] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_template, 0, 0, 0),
   [5] = {.entry = {.count = 1, .reusable = false}}, SHIFT(4),
   [7] = {.entry = {.count = 1, .reusable = true}}, SHIFT(4),
   [9] = {.entry = {.count = 1, .reusable = false}}, SHIFT(14),
@@ -905,40 +904,40 @@ static const TSParseActionEntry ts_parse_actions[] = {
   [15] = {.entry = {.count = 1, .reusable = true}}, SHIFT(15),
   [17] = {.entry = {.count = 1, .reusable = true}}, SHIFT(20),
   [19] = {.entry = {.count = 1, .reusable = true}}, SHIFT(21),
-  [21] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_template_repeat1, 2),
-  [23] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_template_repeat1, 2), SHIFT_REPEAT(4),
-  [26] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_template_repeat1, 2), SHIFT_REPEAT(4),
-  [29] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_template_repeat1, 2), SHIFT_REPEAT(14),
-  [32] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_template_repeat1, 2), SHIFT_REPEAT(14),
-  [35] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_template_repeat1, 2), SHIFT_REPEAT(15),
-  [38] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_template_repeat1, 2), SHIFT_REPEAT(15),
-  [41] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_template_repeat1, 2), SHIFT_REPEAT(20),
-  [44] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_template_repeat1, 2), SHIFT_REPEAT(21),
-  [47] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_template, 1),
-  [49] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_content, 1),
+  [21] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_template_repeat1, 2, 0, 0),
+  [23] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_template_repeat1, 2, 0, 0), SHIFT_REPEAT(4),
+  [26] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_template_repeat1, 2, 0, 0), SHIFT_REPEAT(4),
+  [29] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_template_repeat1, 2, 0, 0), SHIFT_REPEAT(14),
+  [32] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_template_repeat1, 2, 0, 0), SHIFT_REPEAT(14),
+  [35] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_template_repeat1, 2, 0, 0), SHIFT_REPEAT(15),
+  [38] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_template_repeat1, 2, 0, 0), SHIFT_REPEAT(15),
+  [41] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_template_repeat1, 2, 0, 0), SHIFT_REPEAT(20),
+  [44] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_template_repeat1, 2, 0, 0), SHIFT_REPEAT(21),
+  [47] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_template, 1, 0, 0),
+  [49] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_content, 1, 0, 0),
   [51] = {.entry = {.count = 1, .reusable = false}}, SHIFT(5),
   [53] = {.entry = {.count = 1, .reusable = true}}, SHIFT(5),
-  [55] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_content, 1),
-  [57] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_content_repeat1, 2),
-  [59] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_content_repeat1, 2), SHIFT_REPEAT(5),
-  [62] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_content_repeat1, 2), SHIFT_REPEAT(5),
-  [65] = {.entry = {.count = 1, .reusable = false}}, REDUCE(aux_sym_content_repeat1, 2),
-  [67] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_comment_directive, 2),
-  [69] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_comment_directive, 2),
-  [71] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_output_directive, 3),
-  [73] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_output_directive, 3),
-  [75] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_graphql_directive, 3),
-  [77] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_graphql_directive, 3),
-  [79] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_directive, 2),
-  [81] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_directive, 2),
-  [83] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_comment_directive, 3, .production_id = 1),
-  [85] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_comment_directive, 3, .production_id = 1),
-  [87] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_directive, 3),
-  [89] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_directive, 3),
-  [91] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_output_directive, 2),
-  [93] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_output_directive, 2),
-  [95] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_graphql_directive, 2),
-  [97] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_graphql_directive, 2),
+  [55] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_content, 1, 0, 0),
+  [57] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_content_repeat1, 2, 0, 0),
+  [59] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_content_repeat1, 2, 0, 0), SHIFT_REPEAT(5),
+  [62] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_content_repeat1, 2, 0, 0), SHIFT_REPEAT(5),
+  [65] = {.entry = {.count = 1, .reusable = false}}, REDUCE(aux_sym_content_repeat1, 2, 0, 0),
+  [67] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_comment_directive, 2, 0, 0),
+  [69] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_comment_directive, 2, 0, 0),
+  [71] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_output_directive, 3, 0, 0),
+  [73] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_output_directive, 3, 0, 0),
+  [75] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_graphql_directive, 3, 0, 0),
+  [77] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_graphql_directive, 3, 0, 0),
+  [79] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_directive, 2, 0, 0),
+  [81] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_directive, 2, 0, 0),
+  [83] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_comment_directive, 3, 0, 1),
+  [85] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_comment_directive, 3, 0, 1),
+  [87] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_directive, 3, 0, 0),
+  [89] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_directive, 3, 0, 0),
+  [91] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_output_directive, 2, 0, 0),
+  [93] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_output_directive, 2, 0, 0),
+  [95] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_graphql_directive, 2, 0, 0),
+  [97] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_graphql_directive, 2, 0, 0),
   [99] = {.entry = {.count = 1, .reusable = false}}, SHIFT(16),
   [101] = {.entry = {.count = 1, .reusable = true}}, SHIFT(16),
   [103] = {.entry = {.count = 1, .reusable = true}}, SHIFT(9),
@@ -947,22 +946,22 @@ static const TSParseActionEntry ts_parse_actions[] = {
   [109] = {.entry = {.count = 1, .reusable = true}}, SHIFT(12),
   [111] = {.entry = {.count = 1, .reusable = false}}, SHIFT(17),
   [113] = {.entry = {.count = 1, .reusable = true}}, SHIFT(17),
-  [115] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_code, 1),
-  [117] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_code_repeat1, 2), SHIFT_REPEAT(17),
-  [120] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_code_repeat1, 2), SHIFT_REPEAT(17),
-  [123] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_code_repeat1, 2),
+  [115] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_code, 1, 0, 0),
+  [117] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_code_repeat1, 2, 0, 0), SHIFT_REPEAT(17),
+  [120] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_code_repeat1, 2, 0, 0), SHIFT_REPEAT(17),
+  [123] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_code_repeat1, 2, 0, 0),
   [125] = {.entry = {.count = 1, .reusable = false}}, SHIFT(19),
   [127] = {.entry = {.count = 1, .reusable = true}}, SHIFT(19),
-  [129] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_code_repeat1, 2), SHIFT_REPEAT(19),
-  [132] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_code_repeat1, 2), SHIFT_REPEAT(19),
+  [129] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_code_repeat1, 2, 0, 0), SHIFT_REPEAT(19),
+  [132] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_code_repeat1, 2, 0, 0), SHIFT_REPEAT(19),
   [135] = {.entry = {.count = 1, .reusable = false}}, SHIFT(22),
   [137] = {.entry = {.count = 1, .reusable = true}}, SHIFT(22),
   [139] = {.entry = {.count = 1, .reusable = true}}, SHIFT(6),
   [141] = {.entry = {.count = 1, .reusable = true}}, SHIFT(13),
   [143] = {.entry = {.count = 1, .reusable = false}}, SHIFT(23),
   [145] = {.entry = {.count = 1, .reusable = true}}, SHIFT(23),
-  [147] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_code_repeat1, 2), SHIFT_REPEAT(23),
-  [150] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_code_repeat1, 2), SHIFT_REPEAT(23),
+  [147] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_code_repeat1, 2, 0, 0), SHIFT_REPEAT(23),
+  [150] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_code_repeat1, 2, 0, 0), SHIFT_REPEAT(23),
   [153] = {.entry = {.count = 1, .reusable = true}}, SHIFT(7),
   [155] = {.entry = {.count = 1, .reusable = true}}, SHIFT(11),
   [157] = {.entry = {.count = 1, .reusable = true}}, SHIFT(10),
@@ -973,11 +972,15 @@ static const TSParseActionEntry ts_parse_actions[] = {
 #ifdef __cplusplus
 extern "C" {
 #endif
-#ifdef _WIN32
-#define extern __declspec(dllexport)
+#ifdef TREE_SITTER_HIDE_SYMBOLS
+#define TS_PUBLIC
+#elif defined(_WIN32)
+#define TS_PUBLIC __declspec(dllexport)
+#else
+#define TS_PUBLIC __attribute__((visibility("default")))
 #endif
 
-extern const TSLanguage *tree_sitter_embedded_template(void) {
+TS_PUBLIC const TSLanguage *tree_sitter_embedded_template(void) {
   static const TSLanguage language = {
     .version = LANGUAGE_VERSION,
     .symbol_count = SYMBOL_COUNT,
