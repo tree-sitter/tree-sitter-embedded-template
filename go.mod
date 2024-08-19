@@ -1,4 +1,4 @@
-module github.com/tree-sitter/tree-sitter-embedded_template
+module github.com/tree-sitter/tree-sitter-embedded-template
 
 go 1.22
 
