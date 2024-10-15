@@ -1,7 +1,7 @@
 {
   "targets": [
     {
-      "target_name": "tree_sitter_embedded_template_binding",
+      "target_name": "tree_sitter_embedded-template_binding",
       "dependencies": [
         "<!(node -p \"require('node-addon-api').targets\"):node_addon_api_except",
       ],
@@ -12,8 +12,17 @@
         "bindings/node/binding.cc",
         "src/parser.c",
       ],
-      "cflags_c": [
-        "-std=c11",
+      "conditions": [
+        ["OS!='win'", {
+          "cflags_c": [
+            "-std=c11",
+          ],
+        }, { # OS == "win"
+          "cflags_c": [
+            "/std:c11",
+            "/utf-8",
+          ],
+        }],
       ],
     }
   ]
