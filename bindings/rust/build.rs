@@ -11,5 +11,5 @@ fn main() {
     c_config.file(&parser_path);
     println!("cargo:rerun-if-changed={}", parser_path.to_str().unwrap());
 
-    c_config.compile("tree-sitter-embedded_template");
+    c_config.compile("tree-sitter-embedded-template");
 }
