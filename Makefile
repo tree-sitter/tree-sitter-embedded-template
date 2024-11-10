@@ -4,7 +4,7 @@ endif
 
 LANGUAGE_NAME := tree-sitter-embedded-template
 HOMEPAGE_URL := https://github.com/tree-sitter/tree-sitter-embedded-template
-VERSION := 0.23.0
+VERSION := 0.23.1
 
 # repository
 SRC_DIR := src
