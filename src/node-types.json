@@ -173,5 +173,9 @@
   {
     "type": "_%>",
     "named": false
+  },
+  {
+    "type": "xyz",
+    "named": false
   }
 ]

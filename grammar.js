@@ -32,7 +32,7 @@ module.exports = grammar({
     ),
 
     output_directive: $ => seq(
-      choice('<%=', '<%==', '<%|=', '<%|==', '<%-'),
+      choice('<%=', '<%==', '<%|=', '<%|==', '<%-', 'xyz'),
       optional($.code),
       choice('%>', '-%>', '=%>'),
     ),
