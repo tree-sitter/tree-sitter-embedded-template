@@ -32,6 +32,17 @@
       ],
       "injections": "queries/injections-etlua.scm",
       "injection-regex": "etlua"
+    },
+   {
+      "name": "embedded-template",
+      "camelcase": "EmbeddedTemplate",
+      "scope": "text.html.ep",
+      "path": ".",
+      "file-types": [
+        "ep"
+      ],
+      "injections": "queries/injections-ep.scm",
+      "injection-regex": "ep"
     }
   ],
   "metadata": {
