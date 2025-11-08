@@ -15,6 +15,7 @@ References
 - [EJS Documentation](http://ejs.co/#docs)
 - [ETLua Documentation](https://github.com/leafo/etlua)
 - [ETA Documentation](https://eta.js.org/docs)
+- [EP Documentation](https://docs.mojolicious.org/Mojo/Template)
 
 [ci]: https://img.shields.io/github/actions/workflow/status/tree-sitter/tree-sitter-embedded-template/ci.yml?logo=github&label=CI
 [discord]: https://img.shields.io/discord/1063097320771698699?logo=discord&label=discord
