@@ -127,6 +127,7 @@ Empty directives
 <%-%>
 <%--%>
 <%-=%>
+<%-_%>
 <%#%>
 <%graphql%>
 <%|%>
@@ -150,6 +151,8 @@ Empty directives
   (directive)
   (content)
   (directive)
+  (content)
+  (output_directive)
   (content)
   (output_directive)
   (content)

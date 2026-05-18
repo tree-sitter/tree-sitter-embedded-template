@@ -34,7 +34,7 @@ module.exports = grammar({
     output_directive: $ => seq(
       choice('<%=', '<%==', '<%|=', '<%|==', '<%-', 'xyz'),
       optional($.code),
-      choice('%>', '-%>', '=%>'),
+      choice('%>', '-%>', '=%>', '_%>'),
     ),
 
     comment_directive: $ => seq(
